@@ -1,6 +1,6 @@
 myButton.addEventListener('click', (e)=>{
   let request = new XMLHttpRequest()
-  request.open('GET', '/xxx') // 配置 request
+  request.open('GET', 'http://jack.com:8002/xxx') // 配置 request
   request.send()
   request.onreadystatechange = ()=>{
     console.log(request.readyState)
