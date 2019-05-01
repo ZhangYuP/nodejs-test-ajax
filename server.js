@@ -49,7 +49,11 @@ var server = http.createServer(function(request, response){
   }else{
     response.statusCode = 404
     response.setHeader('Content-Type', 'text/html;charset=utf-8') 
-    response.write('找不到对应的路径，你需要自行修改 server.js')
+    response.write(`
+      {
+        "error": "not found"
+      }
+    `)
     response.end()
   }
 
